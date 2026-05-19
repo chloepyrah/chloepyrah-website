@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chloe Pyrah — Data Strategist & Growth Marketing Leader</title>
+  <meta name="description" content="Data strategist and growth marketing leader based in Bangkok. Nine years scaling data-driven marketing across international markets." />
+  <meta property="og:title" content="Chloe Pyrah" />
+  <meta property="og:description" content="Data strategist, growth marketer, and travel writer based in Bangkok." />
+  <meta property="og:url" content="https://chloepyrah.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coral: #E8412A;
+      --coral-dark: #c43520;
+      --yellow: #FFE566;
+      --black: #1a1a1a;
+      --white: #ffffff;
+      --gray-light: #f5f4f0;
+      --gray-mid: #e2e1dc;
+      --gray-text: #888;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-serif: 'DM Serif Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--white); color: var(--black); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .a1 { animation: fadeUp 0.7s 0.0s ease both; }
+    .a2 { animation: fadeUp 0.7s 0.15s ease both; }
+    .a3 { animation: fadeUp 0.7s 0.3s ease both; }
+    .a4 { animation: fadeUp 0.7s 0.45s ease both; }
+
+    /* NAV */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 40px;
+      border-bottom: 0.5px solid var(--gray-mid);
+      position: sticky; top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 22px; letter-spacing: 2px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--gray-text); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--coral); }
+    .nav-cta { background: var(--coral) !important; color: var(--white) !important; padding: 8px 18px; border-radius: 2px; }
+    .nav-cta:hover { background: var(--coral-dark) !important; }
+
+    /* HERO */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 540px; background: var(--coral); overflow: hidden; }
+    .hero-left { padding: 48px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+    .hero-eyebrow { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,229,102,0.8); }
+    .hero-name { font-family: var(--font-display); font-size: clamp(80px, 11vw, 130px); line-height: 0.87; color: var(--yellow); letter-spacing: 2px; margin-top: auto; }
+    .hero-role { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.75; max-width: 280px; margin-top: 20px; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .badge { font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; border: 0.5px solid rgba(255,229,102,0.4); color: rgba(255,229,102,0.85); padding: 5px 12px; border-radius: 1px; }
+    .hero-right { position: relative; overflow: hidden; }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: contrast(1.08) saturate(0.88); }
+    .hero-placeholder { width:100%; height:100%; min-height:480px; background:#c43520; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; }
+    .hero-placeholder p { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.3); }
+    .hero-corner { position: absolute; top: 24px; right: 24px; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,229,102,0.55); }
+
+    /* TICKER */
+    .ticker { background: var(--yellow); padding: 13px 40px; display: flex; align-items: center; gap: 16px; border-bottom: 0.5px solid var(--gray-mid); }
+    .ticker-dot { width: 5px; height: 5px; background: var(--coral); border-radius: 50%; flex-shrink: 0; }
+    .ticker-text { font-size: 13px; color: var(--black); }
+    .ticker-text strong { font-weight: 500; color: var(--coral); }
+
+    /* CARDS */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 0.5px solid var(--gray-mid); }
+    .card { padding: 32px 28px; border-right: 0.5px solid var(--gray-mid); transition: background 0.25s; }
+    .card:last-child { border-right: none; }
+    .card:hover { background: var(--gray-light); }
+    .card-num { font-family: var(--font-display); font-size: 44px; color: var(--coral); line-height: 1; margin-bottom: 10px; }
+    .card-title { font-size: 11px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--black); margin-bottom: 10px; }
+    .card-desc { font-size: 13px; color: var(--gray-text); line-height: 1.7; }
+    .card-cta { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--coral); margin-top: 20px; transition: gap 0.2s; }
+    .card:hover .card-cta { gap: 10px; }
+
+    /* ABOUT */
+    .about { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid var(--gray-mid); }
+    .about-left { background: var(--black); padding: 56px 44px; }
+    .about-eyebrow { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--yellow); opacity: 0.7; margin-bottom: 20px; }
+    .about-heading { font-family: var(--font-serif); font-size: clamp(26px, 3vw, 34px); line-height: 1.2; color: var(--white); margin-bottom: 20px; }
+    .about-heading em { color: var(--yellow); font-style: italic; }
+    .about-body { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.55); }
+    .about-links { display: flex; gap: 20px; margin-top: 32px; }
+    .about-link { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--yellow); opacity: 0.7; transition: opacity 0.2s; }
+    .about-link:hover { opacity: 1; }
+    .about-right { padding: 56px 44px; border-left: 0.5px solid var(--gray-mid); }
+    .skills-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-text); margin-bottom: 28px; }
+    .skill { margin-bottom: 18px; }
+    .skill-top { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .skill-name { font-size: 12px; font-weight: 500; color: var(--black); }
+    .skill-pct { font-size: 11px; color: var(--gray-text); }
+    .skill-track { height: 2px; background: var(--gray-mid); border-radius: 1px; }
+    .skill-fill { height: 2px; background: var(--coral); border-radius: 1px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; padding-top: 32px; border-top: 0.5px solid var(--gray-mid); }
+    .stat-num { font-family: var(--font-display); font-size: 36px; color: var(--coral); line-height: 1; }
+    .stat-label { font-size: 11px; color: var(--gray-text); margin-top: 4px; line-height: 1.4; }
+
+    /* TRAVEL */
+    .travel { padding: 48px 40px; border-bottom: 0.5px solid var(--gray-mid); }
+    .section-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 28px; }
+    .section-eyebrow { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-text); }
+    .section-all { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--coral); transition: gap 0.2s; display: flex; align-items: center; gap: 6px; }
+    .section-all:hover { gap: 10px; }
+    .travel-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+    .travel-card { border: 0.5px solid var(--gray-mid); border-radius: 4px; overflow: hidden; transition: border-color 0.2s, transform 0.2s; cursor: pointer; }
+    .travel-card:hover { border-color: var(--coral); transform: translateY(-2px); }
+    .travel-flag { height: 72px; display: flex; align-items: center; justify-content: center; font-size: 32px; background: var(--gray-light); }
+    .travel-info { padding: 10px 12px; }
+    .travel-country { font-size: 12px; font-weight: 500; color: var(--black); }
+    .travel-region { font-size: 11px; color: var(--gray-text); margin-top: 2px; }
+
+    /* FOOTER */
+    footer { background: var(--black); padding: 28px 40px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: var(--font-display); font-size: 18px; letter-spacing: 2px; color: var(--yellow); }
+    .footer-tagline { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 3px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--yellow); }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 300px; }
+      .hero-left { padding: 32px 20px; }
+      .cards { grid-template-columns: 1fr; }
+      .card { border-right: none; border-bottom: 0.5px solid var(--gray-mid); }
+      .about { grid-template-columns: 1fr; }
+      .about-left, .about-right { padding: 40px 24px; }
+      .travel-grid { grid-template-columns: repeat(3, 1fr); }
+      .travel { padding: 36px 20px; }
+      footer { flex-direction: column; gap: 20px; text-align: center; padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Chloe Pyrah</div>
+    <ul class="nav-links">
+      <li><a href="work.html">Work</a></li>
+      <li><a href="data.html">Data</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:hello@chloepyrah.com" class="nav-cta">Get in touch</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow a1">Data Strategist · Growth Marketing · Bangkok</div>
+      <div class="hero-name a2">CHLOE<br>PYRAH</div>
+      <div class="a3">
+        <p class="hero-role">Nine years scaling data-driven marketing across international markets — with a carry-on always packed.</p>
+        <div class="hero-badges">
+          <span class="badge">AI-First Marketing</span>
+          <span class="badge">Data Visualisation</span>
+          <span class="badge">Growth Strategy</span>
+          <span class="badge">40+ Global Clients</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right a4">
+      <!--
+        HOW TO ADD YOUR PHOTO:
+        1. Save your photo file as "hero.jpg" in the same folder as this index.html file
+        2. Delete the hero-placeholder div below
+        3. Uncomment the img tag by removing the  and  around it
+        4. Save and refresh your browser
+      -->
+      <img src="hero.jpg" alt="Chloe Pyrah" />
+      <div class="hero-corner">Travel & Blog →</div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-dot"></div>
+    <p class="ticker-text">Data strategist & growth marketer — turning numbers into narratives <strong>and the world into content.</strong></p>
+    <div class="ticker-dot"></div>
+    <p class="ticker-text" style="margin-left:auto;font-size:11px;letter-spacing:1px;color:#999;">Bangkok · Available for projects</p>
+  </div>
+
+  <div class="cards">
+    <a class="card" href="work.html">
+      <div class="card-num">01</div>
+      <div class="card-title">Portfolio & Work</div>
+      <p class="card-desc">Campaigns, AI-first transformations, and data products built for 40+ global clients including major travel brands.</p>
+      <div class="card-cta">View work →</div>
+    </a>
+    <a class="card" href="data.html">
+      <div class="card-num">02</div>
+      <div class="card-title">Data & Visualisation</div>
+      <p class="card-desc">Interactive dashboards, data stories, and analytics work that turns complex data into clear decisions.</p>
+      <div class="card-cta">Explore →</div>
+    </a>
+    <a class="card" href="travel.html">
+      <div class="card-num">03</div>
+      <div class="card-title">Travel Blog</div>
+      <p class="card-desc">Dispatches from across Asia and beyond — places, people, and how they move through the world.</p>
+      <div class="card-cta">Read posts →</div>
+    </a>
+  </div>
+
+  <section class="about">
+    <div class="about-left">
+      <div class="about-eyebrow">About me</div>
+      <h2 class="about-heading">Data strategist with a <em>passport full of stamps</em></h2>
+      <p class="about-body">
+        I'm a data strategist and growth marketing leader based in Bangkok. With nine years of experience scaling data-driven marketing across international markets, I blend analytics expertise with a genuine passion for travel.
+        <br><br>
+        As a former Managing Partner at Open Partners, I led AI-first marketing transformation and built data products serving 40+ global clients — including projects with major travel brands.
+      </p>
+      <div class="about-links">
+        <a class="about-link" href="about.html">Full story →</a>
+        <a class="about-link" href="resume.pdf" target="_blank">Download CV →</a>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="skills-label">Core expertise</div>
+      <div class="skill">
+        <div class="skill-top"><span class="skill-name">Growth Marketing</span><span class="skill-pct">95%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top"><span class="skill-name">Data Strategy</span><span class="skill-pct">90%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top"><span class="skill-name">Data Visualisation</span><span class="skill-pct">85%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top"><span class="skill-name">AI-First Marketing</span><span class="skill-pct">88%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:88%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top"><span class="skill-name">Campaign Analytics</span><span class="skill-pct">92%</span></div>
+        <div class="skill-track"><div class="skill-fill" style="width:92%"></div></div>
+      </div>
+      <div class="stats">
+        <div><div class="stat-num">9</div><div class="stat-label">Years experience</div></div>
+        <div><div class="stat-num">40+</div><div class="stat-label">Global clients</div></div>
+        <div><div class="stat-num">13</div><div class="stat-label">Countries explored</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="travel">
+    <div class="section-header">
+      <div class="section-eyebrow">Countries explored</div>
+      <a class="section-all" href="travel.html">All posts →</a>
+    </div>
+    <div class="travel-grid">
+      <a class="travel-card" href="travel.html">
+        <div class="travel-flag">🇹🇭</div>
+        <div class="travel-info"><div class="travel-country">Thailand</div><div class="travel-region">Southeast Asia</div></div>
+      </a>
+      <a class="travel-card" href="travel.html">
+        <div class="travel-flag">🇯🇵</div>
+        <div class="travel-info"><div class="travel-country">Japan</div><div class="travel-region">East Asia</div></div>
+      </a>
+      <a class="travel-card" href="travel.html">
+        <div class="travel-flag">🇻🇳</div>
+        <div class="travel-info"><div class="travel-country">Vietnam</div><div class="travel-region">Southeast Asia</div></div>
+      </a>
+      <a class="travel-card" href="travel.html">
+        <div class="travel-flag">🇮🇩</div>
+        <div class="travel-info"><div class="travel-country">Indonesia</div><div class="travel-region">Southeast Asia</div></div>
+      </a>
+      <a class="travel-card" href="travel.html">
+        <div class="travel-flag">🇮🇹</div>
+        <div class="travel-info"><div class="travel-country">Italy</div><div class="travel-region">Europe</div></div>
+      </a>
+      <a class="travel-card" href="travel.html" style="border-style:dashed;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;">
+        <div style="font-size:22px;margin-bottom:8px;">🌍</div>
+        <div class="travel-country" style="font-size:11px;">+ 8 more</div>
+        <div class="travel-region">View all</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <div class="footer-logo">Chloe Pyrah</div>
+      <div class="footer-tagline">Data · Marketing · Travel · Bangkok</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/chloepyrah" target="_blank">LinkedIn</a>
+      <a href="https://github.com/chloepyrah" target="_blank">GitHub</a>
+      <a href="mailto:hello@chloepyrah.com">Email</a>
+    </div>
+  </footer>
+
+</body>
+</html>
