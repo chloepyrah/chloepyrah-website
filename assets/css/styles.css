@@ -457,3 +457,10 @@ a { color: inherit; }
 .place-group-title { margin: 0 0 20px; font: 500 11px/14px var(--font-mono); letter-spacing: 2px; text-transform: uppercase; color: var(--ink-muted); display: flex; align-items: center; gap: 10px; }
 .place-group-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .place-group-title span { color: var(--ink); }
+
+/* Hero: blue hanging arch behind the sun (from the design system cover), sticker between the feet */
+.cp-phero-arch { position: absolute; z-index: -2; top: -96px; right: -38%; width: 56%; height: 74%; border-radius: 0 0 999px 999px; background: var(--blue); }
+.cp-phero-sun { mix-blend-mode: multiply; }
+@media (prefers-color-scheme: dark) { .cp-phero-sun { mix-blend-mode: screen; } }
+.cp-phero-stage > .cp-sticker { right: auto; left: 13%; top: 79%; }
+@media (max-width: 640px) { .cp-phero-arch { top: 0; right: -20%; width: 48%; height: 62%; } }
