@@ -133,7 +133,7 @@
         </div>
 
         <div class="stat-row">
-          <figure class="cp-stat cp-stat-blue"><span class="cp-stat-disc" aria-hidden="true"></span><div class="cp-stat-value">50+</div><figcaption><span class="cp-stat-label">advertisers measurement solutions in various industries from hospitality to travel and ecommerce</span></figcaption></figure>
+          <figure class="cp-stat cp-stat-blue"><span class="cp-stat-disc" aria-hidden="true"></span><div class="cp-stat-value">50+</div><figcaption><span class="cp-stat-label">advertisers&rsquo; measurement solutions across hospitality, travel, automotive and ecommerce</span></figcaption></figure>
           <figure class="cp-stat cp-stat-teal"><span class="cp-stat-disc" aria-hidden="true"></span><div class="cp-stat-value">30+</div><figcaption><span class="cp-stat-label">data platforms and APIs unified into reporting frameworks</span></figcaption></figure>
           <figure class="cp-stat cp-stat-ink"><span class="cp-stat-disc" aria-hidden="true"></span><div class="cp-stat-value">20+</div><figcaption><span class="cp-stat-label">countries explored and travel guides documented</span></figcaption></figure>
           <figure class="cp-stat cp-stat-red"><span class="cp-stat-disc" aria-hidden="true"></span><div class="cp-stat-value">9+</div><figcaption><span class="cp-stat-label">years of experience in data and growth marketing supporting c-suites around the world</span></figcaption></figure>
@@ -151,6 +151,276 @@
           </div>
           <a class="link-arrow" href="travel.html">All posts &rarr;</a>
         </div>
+        <!-- Travel map: edit the places list below to change pins and notes -->
+        <div class="travel-map" id="travel-map"></div>
+        <script type="application/json" id="travel-places">
+[
+ {
+  "name": "Indonesia",
+  "region": "Southeast Asia",
+  "lat": -2.5,
+  "lon": 118,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Malaysia",
+  "region": "Southeast Asia",
+  "lat": 3.1,
+  "lon": 101.7,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Thailand",
+  "region": "Southeast Asia",
+  "lat": 13.75,
+  "lon": 100.5,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Vietnam",
+  "region": "Southeast Asia",
+  "lat": 16,
+  "lon": 107.8,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Laos",
+  "region": "Southeast Asia",
+  "lat": 19.9,
+  "lon": 102.1,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Cambodia",
+  "region": "Southeast Asia",
+  "lat": 12.6,
+  "lon": 104.9,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "China",
+  "region": "East Asia",
+  "lat": 34,
+  "lon": 108,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Japan",
+  "region": "East Asia",
+  "lat": 36,
+  "lon": 138,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "UAE",
+  "region": "Middle East",
+  "lat": 24.4,
+  "lon": 54.4,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Morocco",
+  "region": "North Africa",
+  "lat": 31.8,
+  "lon": -7.1,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Turkey",
+  "region": "Europe",
+  "lat": 39,
+  "lon": 35,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Greece",
+  "region": "Europe",
+  "lat": 39,
+  "lon": 22,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Croatia",
+  "region": "Europe",
+  "lat": 45.1,
+  "lon": 15.2,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Italy",
+  "region": "Europe",
+  "lat": 42.8,
+  "lon": 12.5,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Spain",
+  "region": "Europe",
+  "lat": 40.2,
+  "lon": -3.7,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Portugal",
+  "region": "Europe",
+  "lat": 39.6,
+  "lon": -8,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "France",
+  "region": "Europe",
+  "lat": 46.6,
+  "lon": 2.4,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Germany",
+  "region": "Europe",
+  "lat": 51.1,
+  "lon": 10.4,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Netherlands",
+  "region": "Europe",
+  "lat": 52.2,
+  "lon": 5.3,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "Austria",
+  "region": "Europe",
+  "lat": 47.6,
+  "lon": 14.1,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "UK",
+  "region": "Europe",
+  "lat": 53,
+  "lon": -1.5,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ },
+ {
+  "name": "US",
+  "region": "North America",
+  "lat": 39,
+  "lon": -98,
+  "notes": [
+   "Placeholder: favourite neighbourhood",
+   "Placeholder: what to eat",
+   "Placeholder: one tip for first-timers"
+  ],
+  "href": "travel.html"
+ }
+]
+        </script>
         <div class="places"><a class="place" href="travel.html"><span class="place-shape cp-fill-red" aria-hidden="true">ID</span><span class="place-name">Indonesia</span><span class="place-region">Southeast Asia</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-blue" aria-hidden="true">MY</span><span class="place-name">Malaysia</span><span class="place-region">Southeast Asia</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-teal" aria-hidden="true">TH</span><span class="place-name">Thailand</span><span class="place-region">Southeast Asia</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-orange" aria-hidden="true">VN</span><span class="place-name">Vietnam</span><span class="place-region">Southeast Asia</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-olive" aria-hidden="true">LA</span><span class="place-name">Laos</span><span class="place-region">Southeast Asia</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-marker" aria-hidden="true">KH</span><span class="place-name">Cambodia</span><span class="place-region">Southeast Asia</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-red" aria-hidden="true">CN</span><span class="place-name">China</span><span class="place-region">East Asia</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-blue" aria-hidden="true">JP</span><span class="place-name">Japan</span><span class="place-region">East Asia</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-teal" aria-hidden="true">AE</span><span class="place-name">UAE</span><span class="place-region">Middle East</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-orange" aria-hidden="true">MA</span><span class="place-name">Morocco</span><span class="place-region">North Africa</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-olive" aria-hidden="true">TR</span><span class="place-name">Turkey</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-marker" aria-hidden="true">GR</span><span class="place-name">Greece</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-red" aria-hidden="true">HR</span><span class="place-name">Croatia</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-blue" aria-hidden="true">IT</span><span class="place-name">Italy</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-teal" aria-hidden="true">ES</span><span class="place-name">Spain</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-orange" aria-hidden="true">PT</span><span class="place-name">Portugal</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-olive" aria-hidden="true">FR</span><span class="place-name">France</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-marker" aria-hidden="true">DE</span><span class="place-name">Germany</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-red" aria-hidden="true">NL</span><span class="place-name">Netherlands</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-blue" aria-hidden="true">AT</span><span class="place-name">Austria</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-teal" aria-hidden="true">GB</span><span class="place-name">UK</span><span class="place-region">Europe</span></a><a class="place" href="travel.html"><span class="place-shape cp-fill-orange" aria-hidden="true">US</span><span class="place-name">US</span><span class="place-region">North America</span></a></div>
       </div>
     </section>
@@ -175,5 +445,12 @@
   </footer>
 
   <script src="assets/js/site.js"></script>
+  <script src="assets/js/travel-map.js"></script>
+  <script>
+    CPTravelMap(document.getElementById("travel-map"), {
+      places: JSON.parse(document.getElementById("travel-places").textContent),
+      caption: "Click a pin to open its notes. Zoom in, or jump to a region."
+    });
+  </script>
 </body>
 </html>
