@@ -464,3 +464,11 @@ a { color: inherit; }
 @media (prefers-color-scheme: dark) { .cp-phero-sun { mix-blend-mode: screen; } }
 .cp-phero-stage > .cp-sticker { right: auto; left: 13%; top: 79%; }
 @media (max-width: 640px) { .cp-phero-arch { top: 0; right: -20%; width: 48%; height: 62%; } }
+
+/* Country buttons filter the travel map */
+button.place { border: 0; background: none; padding: 0; font: inherit; color: inherit; cursor: pointer; }
+button.place:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; border-radius: 12px; }
+.place[aria-pressed="true"] .place-shape { border-radius: 24px; box-shadow: 0 0 0 4px var(--paper), 0 0 0 7px var(--ink); }
+.place[aria-pressed="true"] .place-name { text-decoration: underline; text-underline-offset: 4px; }
+.cp-tmap-filter { position: absolute; z-index: 5; left: 12px; top: 12px; display: flex; align-items: center; gap: 10px; padding: 6px 6px 6px 14px; border-radius: var(--radius-pill); background: var(--ink); color: var(--paper); font: 500 13px/1 var(--font-sans); }
+.cp-tmap-filter .cp-tmap-chip { box-shadow: none; }

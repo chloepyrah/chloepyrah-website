@@ -53,7 +53,7 @@
     var pinLayer = el("div", "cp-tmap-pins"); stage.appendChild(pinLayer);
     host.appendChild(stage);
 
-    var view = { z: 1, cx: 0.5, cy: 0.5 }, open = null;
+    var view = { z: 1, cx: 0.5, cy: 0.5 }, open = null, filterName = null;
     var pins = places.map(function (p, i) {
       var b = el("button", "cp-tmap-pin", { type: "button", "aria-label": p.name, title: p.name, "aria-expanded": "false" });
       b.addEventListener("click", function (e) { e.stopPropagation(); setOpen(open === i ? null : i); });
@@ -93,7 +93,7 @@
         var s = screen(fx(p.lon), fy(p.lat)), b = pins[i];
         b.style.left = (s.x * 100) + "%"; b.style.top = (s.y * 100) + "%";
         var out = s.x < -0.02 || s.x > 1.02 || s.y < -0.02 || s.y > 1.02;
-        b.hidden = out;
+        b.hidden = out || (filterName != null && p.country !== filterName);
       });
       zin.disabled = view.z >= ZMAX - 0.01; zout.disabled = view.z <= ZMIN + 0.01;
       regionBtns.forEach(function (b, i) {
@@ -103,7 +103,31 @@
       placeCard();
     }
     function zoomBy(f) { view.z *= f; render(); }
-    function goTo(r) { view.z = r.z; view.cx = fx(r.lon); view.cy = fy(r.lat); render(); }
+    function goTo(r, keepFilter) { if (!keepFilter) setFilter(null, true); view.z = r.z; view.cx = fx(r.lon); view.cy = fy(r.lat); render(); }
+
+    /* Show only one country's pins and zoom to fit them. Pass null to show everything again. */
+    var filterBar = el("div", "cp-tmap-filter"); filterBar.hidden = true;
+    var filterText = el("span"); var filterClear = el("button", "cp-tmap-chip", { type: "button" }); filterClear.textContent = "Show all \u00d7";
+    filterBar.appendChild(filterText); filterBar.appendChild(filterClear); stage.appendChild(filterBar);
+    filterClear.addEventListener("click", function () { setFilter(null); goTo(regions[0]); });
+    function setFilter(name, quiet) {
+      filterName = name || null;
+      if (open != null && filterName && places[open].country !== filterName) setOpen(null);
+      filterBar.hidden = !filterName;
+      if (filterName) {
+        var list = places.filter(function (p) { return p.country === filterName; });
+        filterText.textContent = list.length ? filterName + ": " + list.length + (list.length === 1 ? " guide" : " guides") : filterName + ": guides coming soon";
+        var pts = list.length ? list : (opts.countries && opts.countries[filterName] ? [opts.countries[filterName]] : []);
+        if (pts.length) {
+          var xs = pts.map(function (p) { return fx(p.lon); }), ys = pts.map(function (p) { return fy(p.lat); });
+          var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs), y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
+          var span = Math.max((x1 - x0) * 1.6, (y1 - y0) * 1.6, 0.0001);
+          view.z = Math.min(5, Math.max(2.4, 1 / span)); view.cx = (x0 + x1) / 2; view.cy = (y0 + y1) / 2;
+        }
+      }
+      if (typeof opts.onFilter === "function") opts.onFilter(filterName);
+      if (!quiet) render();
+    }
 
     function setOpen(i) {
       open = i;
@@ -156,7 +180,7 @@
 
     render();
     if (opts.initial != null) setOpen(opts.initial);
-    return { goTo: goTo, open: setOpen };
+    return { goTo: goTo, open: setOpen, filter: setFilter };
   }
   root.CPTravelMap = CPTravelMap;
 })(window);
