@@ -249,7 +249,7 @@ svg.cp-motif, svg.cp-atom { background-color: transparent; }
 .cp-phero::after { content: ""; position: absolute; inset: 0; background-image: var(--cp-grain); opacity: .14; mix-blend-mode: multiply; pointer-events: none; }
 .cp-phero-text { position: relative; z-index: 2; display: grid; gap: 18px; align-content: center; }
 .cp-phero-eyebrow { font: 500 11px/14px var(--font-mono); letter-spacing: 2px; text-transform: uppercase; color: var(--ink-muted); }
-.cp-phero-name { margin: 0; font: 400 96px/0.9 var(--font-display); color: var(--red); text-wrap: balance; }
+.cp-phero-name { margin: 0; font: 400 96px/0.9 var(--font-display); color: var(--ink); text-wrap: balance; }
 .cp-phero-tagline { margin: 0; font: 500 30px/1.2 var(--font-sans); letter-spacing: -0.6px; max-width: 18ch; }
 .cp-phero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
 .cp-phero-stage { position: relative; justify-self: center; width: min(100%, 380px); padding-top: 24px; }
@@ -345,10 +345,12 @@ a { color: inherit; }
 .about-desktop .cp-desktop { border-radius: 24px; min-height: 620px; }
 .about-copy { position: absolute; left: 48px; top: 64px; max-width: 420px; z-index: 1; }
 .about-copy p { margin: 16px 0 0; }
-.stat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
+.stat-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
+@media (max-width: 1100px) { .stat-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .stat-row .cp-stat { max-width: none; padding: 32px 32px 30px; gap: 14px; }
-.stat-row .cp-stat-value { font-size: 104px; }
-.stat-row .cp-stat-label { font-size: 16px; line-height: 24px; max-width: 26ch; }
+.stat-row .cp-stat-value { font-size: 88px; }
+.cp-stat-teal .cp-stat-value { color: var(--teal); } .cp-stat-teal .cp-stat-disc { background: var(--red); opacity: .25; }
+.stat-row .cp-stat-label { font-size: 15px; line-height: 23px; }
 .stat-row .cp-stat-disc { width: 180px; height: 180px; right: -50px; top: -50px; }
 @media (max-width: 760px) { .stat-row { grid-template-columns: 1fr; } .stat-row .cp-stat-value { font-size: 80px; } }
 @media (max-width: 760px) {
