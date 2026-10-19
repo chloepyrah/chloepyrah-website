@@ -1,0 +1,4 @@
+# Keep installers and Mac system files out of the website
+*.dmg
+*.zip
+.DS_Store
