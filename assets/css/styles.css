@@ -151,6 +151,7 @@ svg.cp-motif, svg.cp-atom { background-color: transparent; }
 .cp-sticker-pill { border-radius: var(--radius-pill); padding: 10px 8px; }
 .cp-sticker-atom { background: none !important; color: var(--on-marker); }
 .cp-sticker-atom .cp-sticker-text { color: var(--on-marker); font-size: 10px; letter-spacing: 1.5px; max-width: 54%; padding: 0; line-height: 1.15; }
+.cp-sticker-atom:not(.cp-tone-marker) .cp-sticker-text { color: #ffffff; } /* white text on red, blue, teal, orange and olive starbursts */
 .cp-atom { position: absolute; inset: 0; width: 100%; height: 100%; transition: transform 1.2s var(--cp-ease); }
 .cp-sticker-atom:hover .cp-atom { transform: rotate(45deg); }
 .cp-atom line { stroke-width: 3px; stroke-linecap: round; }
