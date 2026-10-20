@@ -305,9 +305,8 @@ svg.cp-motif, svg.cp-atom { background-color: transparent; }
 .cp-tmap-zbtn:hover:not(:disabled) { background: var(--marker); color: var(--on-marker); }
 .cp-tmap-zbtn:disabled { color: var(--line); cursor: default; }
 :where(.cp-tmap-chip, .cp-tmap-zbtn):focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
-.cp-tmap-card { position: absolute; z-index: 6; width: 240px; transform: translate(18px, -24px); animation: cp-tmap-in .3s var(--cp-ease); }
-.cp-tmap-card.is-left { transform: translate(calc(-100% - 18px), -24px); }
-.cp-tmap-card.is-up { margin-top: -120px; }
+.cp-tmap-card { position: absolute; z-index: 6; width: 290px; transform: translateX(18px); animation: cp-tmap-in .3s var(--cp-ease); }
+.cp-tmap-card.is-left { transform: translateX(calc(-100% - 18px)); }
 .cp-tmap-card .cp-note { width: 100%; box-shadow: var(--shadow-hover); }
 .cp-tmap-close { border: 0; background: none; padding: 0 2px; font: 400 20px/1 var(--font-sans); color: var(--ink-muted); cursor: pointer; }
 .cp-tmap-close:hover { color: var(--ink); }
@@ -472,3 +471,6 @@ button.place:focus-visible { outline: 2px solid var(--focus); outline-offset: 4p
 .place[aria-pressed="true"] .place-name { text-decoration: underline; text-underline-offset: 4px; }
 .cp-tmap-filter { position: absolute; z-index: 5; left: 12px; top: 12px; display: flex; align-items: center; gap: 10px; padding: 6px 6px 6px 14px; border-radius: var(--radius-pill); background: var(--ink); color: var(--paper); font: 500 13px/1 var(--font-sans); }
 .cp-tmap-filter .cp-tmap-chip { box-shadow: none; }
+
+.cp-tmap-card { width: 290px; }
+.cp-tmap-card .cp-note-list strong { font-weight: 700; }
