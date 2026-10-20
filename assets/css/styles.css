@@ -475,3 +475,6 @@ button.place:focus-visible { outline: 2px solid var(--focus); outline-offset: 4p
 
 .cp-tmap-card { width: 290px; }
 .cp-tmap-card .cp-note-list strong { font-weight: 700; }
+
+/* Angkor portrait: nudge down so she sits right on the teal ledge (no gap) */
+.cp-phero-img { transform: translateY(2.4%); }
