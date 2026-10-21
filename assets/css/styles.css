@@ -615,3 +615,7 @@ button.place:focus-visible { outline: 2px solid var(--focus); outline-offset: 4p
 .guide[hidden] { display: none; }
 .photo-slot { aspect-ratio: 4 / 4.4; }
 .photo-rect { aspect-ratio: 4 / 3.9; }
+/* Work focus cards: MMM matches the BI shape (rounded bottom), AI stays an arch */
+.focus-card:nth-child(3n+1) .cp-case-media { border-radius: 0 0 999px 999px; }
+@media (min-width: 761px) { .focus-card:nth-child(3n+1) .cp-case-media { aspect-ratio: 4 / 4.2; } }
+.focus-card:hover .cp-case-media { border-radius: 40px; }
