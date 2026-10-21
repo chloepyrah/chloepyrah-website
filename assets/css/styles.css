@@ -671,3 +671,16 @@ body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 56px; }
 .case-feature-title { font-size: 32px; }
 .case-feature .cp-case-summary { font-size: 15px; line-height: 1.5; }
 @media (max-width: 760px) { .case-feature-list { padding: 4px 20px; } .case-feature { grid-template-columns: 1fr; gap: 16px; padding: 20px 0; } .case-feature-art { width: 110px; justify-self: start; } .case-feature-title { font-size: 26px; } }
+
+/* Case study: one shared column so every edge lines up */
+.cs-col { max-width: 956px; }
+@media (max-width: 899px) { .cs-col { max-width: none; } }
+.cs-hero .wrap.cs-col { max-width: 956px; }
+.cs-wrap.cs-col { max-width: 956px; }
+.cs-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0; }
+@media (max-width: 760px) { .cs-stats { grid-template-columns: 1fr; } }
+body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 64px; }
+.cs-intro { max-width: none; }
+.cs-block { font-size: 18px; }
+.cs-body { padding-top: 24px; }
+.cs-body + .section .cta-band { margin-top: 0; }
