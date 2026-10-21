@@ -619,3 +619,38 @@ button.place:focus-visible { outline: 2px solid var(--focus); outline-offset: 4p
 .focus-card:nth-child(3n+1) .cp-case-media { border-radius: 0 0 999px 999px; }
 @media (min-width: 761px) { .focus-card:nth-child(3n+1) .cp-case-media { aspect-ratio: 4 / 4.2; } }
 .focus-card:hover .cp-case-media { border-radius: 40px; }
+
+/* Case studies: feature card on the Work page */
+.case-feature-list { display: grid; gap: 32px; }
+.case-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 48px; align-items: center; padding: 40px; border-radius: 24px; background: var(--surface); box-shadow: var(--shadow-rest); color: var(--ink); text-decoration: none; transition: box-shadow .3s var(--cp-ease), transform .3s var(--cp-ease); }
+.case-feature:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+.case-feature-art { position: relative; display: block; width: min(100%, 320px); aspect-ratio: 1; justify-self: center; --ph: var(--blue); --ph-2: var(--marker); --ph-3: var(--red); }
+.case-feature-text { display: grid; gap: 14px; justify-items: start; }
+.case-feature-title { font-size: 44px; line-height: 1; }
+.case-feature:hover .case-feature-title { color: var(--red); }
+.case-feature .cp-case-summary { font-size: 16px; line-height: 1.6; }
+@media (max-width: 760px) { .case-feature { grid-template-columns: 1fr; gap: 24px; padding: 24px; } .case-feature-art { width: min(70%, 240px); } .case-feature-title { font-size: 32px; } }
+
+/* Case study reading page */
+.cs-hero { padding-block: 56px 24px; }
+.cs-hero .wrap { display: grid; gap: 18px; justify-items: start; max-width: 960px; }
+.cs-back { margin-bottom: 8px; }
+.cs-hero .eyebrow { margin: 0; }
+.cs-title { margin: 0; font: 400 88px/.92 var(--font-display); letter-spacing: -1px; text-wrap: balance; }
+.cs-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.cs-intro { font-size: 19px; max-width: 54ch; }
+.cs-body { padding-top: 48px; }
+.cs-wrap { max-width: 760px; display: grid; gap: 56px; }
+.cs-block { display: grid; gap: 18px; font-size: 17px; line-height: 1.7; }
+.cs-block p { margin: 0; }
+.cs-h { margin: 0 0 4px; font: 400 40px/1 var(--font-display); }
+.cs-block:nth-child(5n+1) .cs-h { color: var(--blue); } .cs-block:nth-child(5n+2) .cs-h { color: var(--orange-ink); }
+.cs-block:nth-child(5n+3) .cs-h { color: var(--teal); } .cs-block:nth-child(5n+4) .cs-h { color: var(--red-ink); } .cs-block:nth-child(5n) .cs-h { color: var(--olive-ink); }
+.cs-list { background: var(--surface); border-radius: var(--radius-card); box-shadow: var(--shadow-rest); padding: 22px 26px; gap: 10px; font-size: 16px; line-height: 1.5; }
+.cs-quote { margin: 8px 0; padding: 28px 32px; border-radius: 0 var(--radius-card) var(--radius-card) 0; background: var(--linen); border-left: 6px solid var(--marker); }
+.cs-quote p { font: 400 italic 34px/1.2 var(--font-serif); }
+.cs-quote cite { display: block; margin-top: 12px; font: 400 12px/16px var(--font-mono); font-style: normal; color: var(--ink-muted); }
+@media (max-width: 640px) { .cs-title { font-size: 52px; } .cs-h { font-size: 30px; } .cs-quote p { font-size: 26px; } }
+.nobr { white-space: nowrap; }
+body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 56px; }
+@media (max-width: 1100px) { body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 72px; } }
