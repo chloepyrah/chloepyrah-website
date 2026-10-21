@@ -684,3 +684,11 @@ body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 64px; }
 .cs-block { font-size: 18px; }
 .cs-body { padding-top: 24px; }
 .cs-body + .section .cta-band { margin-top: 0; }
+
+/* Footer: links sit on the page margin; arches tucked into the corner below them */
+@media (min-width: 761px) {
+  .site-footer .wrap { padding-right: 48px; }
+  .site-footer { padding-bottom: 56px; }
+  .footer-arches { width: 130px !important; right: max(48px, calc((100% - 1104px) / 2)); bottom: -30px; }
+  .site-footer { padding-bottom: 88px; }
+}
