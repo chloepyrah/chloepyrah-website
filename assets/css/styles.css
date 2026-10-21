@@ -813,3 +813,22 @@ body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 64px; }
   .st-arrow { display: inline; }
 }
 .st-note { justify-self: center; }
+
+/* Case study card art: a mini brief form on flat shapes */
+.case-feature-art.page-hero-brief { --ph: var(--teal); --ph-2: var(--orange); --ph-3: var(--red); }
+.mini-brief { position: absolute; left: 22%; top: 18%; width: 62%; height: 70%; z-index: 2; background: var(--surface); border-radius: 10px; box-shadow: var(--shadow-hover); padding: 9% 9% 0; display: flex; flex-direction: column; gap: 7%; overflow: hidden; }
+.mini-brief i { display: block; border-radius: 999px; }
+.mb-top { display: flex; gap: 4px; position: absolute; left: 8%; top: 5%; }
+.mb-dot { width: 5px; height: 5px; background: var(--line); }
+.mb-top .mb-dot:nth-child(1) { background: var(--red); } .mb-top .mb-dot:nth-child(2) { background: var(--marker); } .mb-top .mb-dot:nth-child(3) { background: var(--teal); }
+.mb-title { display: block; height: 8px; width: 78%; border-radius: 999px; background: var(--ink); margin-top: 6%; }
+.mb-status { display: block; height: 8px; width: 38%; border-radius: 999px; background: var(--blue); }
+.mb-row { display: flex; align-items: center; gap: 4px; padding-top: 6%; border-top: 1px solid var(--line); }
+.mb-label { width: 26%; height: 5px; background: var(--line); margin-right: 6%; flex: none; }
+.mb-pill { height: 8px; width: 24%; }
+.mb-short { width: 14%; }
+.mb-blue { background: var(--blue); } .mb-orange { background: var(--orange); } .mb-olive { background: var(--olive); } .mb-teal { background: var(--teal); }
+.mb-av { width: 10px; height: 10px; border-radius: 50%; background: var(--red); }
+.case-feature-art.page-hero-brief .ph-arch { left: 0; width: 58%; }
+.case-feature-art.page-hero-brief .ph-dot { right: 4%; bottom: 4%; z-index: 3; }
+.mini-brief > span { flex: none; }
