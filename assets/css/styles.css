@@ -654,3 +654,20 @@ button.place:focus-visible { outline: 2px solid var(--focus); outline-offset: 4p
 .nobr { white-space: nowrap; }
 body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 56px; }
 @media (max-width: 1100px) { body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 72px; } }
+
+/* Work: shorter focus shapes (half height) */
+.focus-card .cp-case-media, .focus-card:nth-child(n) .cp-case-media { aspect-ratio: 4 / 2.1; }
+.focus-word { font-size: 64px; }
+@media (max-width: 760px) { .focus-card .cp-case-media, .focus-card:nth-child(n) .cp-case-media { aspect-ratio: 16 / 7; } }
+
+/* Case studies: one frame holding compact rows (room for three) */
+.case-feature-list { gap: 0; padding: 8px 32px; border-radius: 24px; background: var(--surface); box-shadow: var(--shadow-rest); }
+.case-feature { grid-template-columns: 150px minmax(0, 1fr); gap: 32px; padding: 24px 0; border-radius: 0; background: none; box-shadow: none; }
+.case-feature + .case-feature { border-top: 1px solid var(--line); }
+.case-feature:hover { box-shadow: none; transform: none; }
+.case-feature-art { width: 150px; }
+.case-feature-art .ph-label { display: none; }
+.case-feature-text { gap: 10px; }
+.case-feature-title { font-size: 32px; }
+.case-feature .cp-case-summary { font-size: 15px; line-height: 1.5; }
+@media (max-width: 760px) { .case-feature-list { padding: 4px 20px; } .case-feature { grid-template-columns: 1fr; gap: 16px; padding: 20px 0; } .case-feature-art { width: 110px; justify-self: start; } .case-feature-title { font-size: 26px; } }
