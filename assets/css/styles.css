@@ -925,4 +925,4 @@ body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 64px; }
 @media (max-width: 600px) { .gallery { columns: 2; column-gap: 12px; } .gal { margin-bottom: 12px; } }
 .gal { display: block; } .gal-media { margin-bottom: 8px; }
 .gal-media[style*="ta-prohm"], .guide-photo[style*="ta-prohm"] { background-position: 82% 50%; }
-.guide-photo[style*="langkawi-pier"], .guide-photo[style*="hiriketiya"] { background-position: 50% 40%; }
+.guide-photo[style*="langkawi-pier"] { background-position: 50% 40%; }
