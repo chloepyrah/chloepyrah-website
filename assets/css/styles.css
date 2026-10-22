@@ -832,3 +832,20 @@ body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 64px; }
 .case-feature-art.page-hero-brief .ph-arch { left: 0; width: 58%; }
 .case-feature-art.page-hero-brief .ph-dot { right: 4%; bottom: 4%; z-index: 3; }
 .mini-brief > span { flex: none; }
+
+/* Data page: full-width dashboard visual with copy beside the heading */
+.viz-wide { grid-template-columns: 1fr; gap: 28px; }
+.viz-wide .viz-copy { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 48px; row-gap: 12px; align-items: start; }
+.viz-wide .viz-copy > .cp-case-meta, .viz-wide .viz-copy > .viz-title { grid-column: 1; }
+.viz-wide .viz-copy > .viz-text, .viz-wide .viz-copy > .link-arrow { grid-column: 2; }
+.viz-wide .viz-copy > .cp-case-meta { grid-row: 1; } .viz-wide .viz-copy > .viz-title { grid-row: 2; }
+.viz-wide .viz-copy > .viz-text:first-of-type { grid-row: 1 / span 2; } .viz-wide .viz-copy > .viz-text:nth-of-type(2) { grid-row: 3; }
+.viz-wide .viz-copy > .link-arrow { grid-row: 4; justify-self: start; }
+.dash-grid-tiles-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.dash-grid-even { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) {
+  .viz-wide .viz-copy { grid-template-columns: 1fr; }
+  .viz-wide .viz-copy > * { grid-column: 1 !important; grid-row: auto !important; }
+  .dash-grid-tiles-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dash-grid-even { grid-template-columns: 1fr; }
+}
