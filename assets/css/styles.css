@@ -901,3 +901,9 @@ body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 64px; }
 .page-hero-art .ph-photo { background-position: 50% 30%; }
 @media (max-width: 760px) { .moment .photo-rect, .moment .photo-arch, .moment .photo-round { aspect-ratio: 4 / 3.4; } }
 @media (min-width: 761px) { .moments .moment-media.photo-rect, .moments .moment-media.photo-arch, .moments .moment-media.photo-round { aspect-ratio: 4 / 4.2; } }
+
+/* Home "What you'll find here": half-height pictures */
+.home-doors .cp-case-media, .home-doors .cp-case:nth-child(n) .cp-case-media { aspect-ratio: 4 / 2.1; }
+.home-doors .cp-case-data .cp-case-media { background-position: center top; }
+@media (max-width: 760px) { .home-doors .cp-case-media, .home-doors .cp-case:nth-child(n) .cp-case-media { aspect-ratio: 16 / 7; } }
+.page-hero-work .ph-photo { background-position: 45% 40%; }
