@@ -926,3 +926,4 @@ body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 64px; }
 .gal { display: block; } .gal-media { margin-bottom: 8px; }
 .gal-media[style*="ta-prohm"], .guide-photo[style*="ta-prohm"] { background-position: 82% 50%; }
 .guide-photo[style*="langkawi-pier"] { background-position: 50% 40%; }
+.page-hero-travel .ph-photo { background-position: 50% 40%; }
