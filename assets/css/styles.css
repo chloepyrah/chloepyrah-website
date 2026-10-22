@@ -886,3 +886,18 @@ body[class*="page-case-"] .stat-row .cp-stat-value { font-size: 64px; }
 .ma-teal { background: var(--teal); } .ma-blue { background: var(--blue); } .ma-red { background: var(--red); } .ma-marker { background: var(--marker); }
 .cs-title-long { font-size: 64px; line-height: .95; }
 @media (max-width: 640px) { .cs-title-long { font-size: 42px; } }
+
+/* Work: "out and about" photo strip */
+.moments { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start; }
+.moment .photo-rect, .moment .photo-arch, .moment .photo-round { aspect-ratio: 4 / 4.2; }
+.moment { margin: 0; display: grid; gap: 14px; }
+.moment-media { display: block; aspect-ratio: 4 / 4.4; background-size: cover; background-position: center; background-color: var(--linen); }
+.moment-media.photo-rect { aspect-ratio: 4 / 3.9; }
+.moment-media.photo-arch { border-radius: 999px 999px 0 0; }
+.moment-media.photo-round { border-radius: 0 0 999px 999px; }
+.moment figcaption { display: grid; gap: 8px; justify-items: start; }
+.moment-text { font-size: 15px; line-height: 1.45; }
+@media (max-width: 760px) { .moments { grid-template-columns: 1fr; } .moment-media, .moment-media.photo-rect { aspect-ratio: 4 / 3.4; } }
+.page-hero-art .ph-photo { background-position: 50% 30%; }
+@media (max-width: 760px) { .moment .photo-rect, .moment .photo-arch, .moment .photo-round { aspect-ratio: 4 / 3.4; } }
+@media (min-width: 761px) { .moments .moment-media.photo-rect, .moments .moment-media.photo-arch, .moments .moment-media.photo-round { aspect-ratio: 4 / 4.2; } }
